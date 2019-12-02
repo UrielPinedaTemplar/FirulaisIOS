@@ -31,8 +31,11 @@ class PerdiVC: UIViewController {
             self.view.frame.origin.y = 0
         }
     }
+    
 
-   @IBAction func backFromModal(_ segue: UIStoryboardSegue) {
-       self.tabBarController?.selectedIndex = 1
-   }
+    
+    @IBAction func back(_ sender: Any) {
+        self.performSegue(withIdentifier: "returnFromModal", sender: self)
+    }
+    
 }

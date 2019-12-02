@@ -460,7 +460,7 @@ Características: Tiene un collar gris de piedras</string>
         <!--Añadir-->
         <scene sceneID="2st-4k-PlS">
             <objects>
-                <viewController id="4jb-Fi-eQ5" sceneMemberID="viewController">
+                <viewController id="4jb-Fi-eQ5" customClass="AnadirVC" customModule="FirulaisIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u8g-69-FL2"/>
                         <viewControllerLayoutGuide type="bottom" id="lvH-Xa-d7T"/>
@@ -615,6 +615,7 @@ Características: Tiene un collar gris de piedras</string>
                                 <rect key="frame" x="179" y="617" width="56" height="30"/>
                                 <state key="normal" title="Publicar"/>
                                 <connections>
+                                    <action selector="back:" destination="t9r-sZ-uUj" eventType="touchUpInside" id="ReT-3B-tGg"/>
                                     <segue destination="Fml-Cm-lDh" kind="unwind" identifier="returnFromModal" unwindAction="backFromModal:" id="RBG-WL-Hvt"/>
                                 </connections>
                             </button>
@@ -761,6 +762,7 @@ Características: Tiene un collar gris de piedras</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Publicar"/>
                                 <connections>
+                                    <action selector="back:" destination="SXZ-dn-EPm" eventType="touchUpInside" id="BYC-VW-h9b"/>
                                     <segue destination="QAh-gH-Q4s" kind="unwind" identifier="returnFromModal" unwindAction="backFromModal:" id="4CR-d6-xa8"/>
                                 </connections>
                             </button>
