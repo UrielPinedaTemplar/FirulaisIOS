@@ -27,6 +27,10 @@
 		B438C963238BE0DD00215713 /* searchperrito.png in Resources */ = {isa = PBXBuildFile; fileRef = B438C962238BE0DC00215713 /* searchperrito.png */; };
 		B438C967238BE6B700215713 /* addperrito.png in Resources */ = {isa = PBXBuildFile; fileRef = B438C966238BE6B700215713 /* addperrito.png */; };
 		B438C96D238BEB5700215713 /* photo-1543320317-15188058b450.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B438C96C238BEB5600215713 /* photo-1543320317-15188058b450.jpeg */; };
+		B438C96F2394FA3500215713 /* perdido.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B438C96E2394FA3500215713 /* perdido.jpg */; };
+		B438C9712394FB8000215713 /* encontrado.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B438C9702394FB8000215713 /* encontrado.jpg */; };
+		B438C9732395000F00215713 /* EncontreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438C9722395000F00215713 /* EncontreVC.swift */; };
+		B438C9752395002000215713 /* PerdiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438C9742395002000215713 /* PerdiVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		B438C962238BE0DC00215713 /* searchperrito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchperrito.png; sourceTree = "<group>"; };
 		B438C966238BE6B700215713 /* addperrito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addperrito.png; sourceTree = "<group>"; };
 		B438C96C238BEB5600215713 /* photo-1543320317-15188058b450.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1543320317-15188058b450.jpeg"; sourceTree = "<group>"; };
+		B438C96E2394FA3500215713 /* perdido.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = perdido.jpg; sourceTree = "<group>"; };
+		B438C9702394FB8000215713 /* encontrado.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = encontrado.jpg; sourceTree = "<group>"; };
+		B438C9722395000F00215713 /* EncontreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncontreVC.swift; sourceTree = "<group>"; };
+		B438C9742395002000215713 /* PerdiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerdiVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,8 @@
 				B438C94E238B5A2100215713 /* userMainVC.swift */,
 				B438C952238BCC6B00215713 /* RegisterVC.swift */,
 				B438C954238BD22600215713 /* MainMenuVC.swift */,
+				B438C9722395000F00215713 /* EncontreVC.swift */,
+				B438C9742395002000215713 /* PerdiVC.swift */,
 			);
 			path = FirulaisIOS;
 			sourceTree = "<group>";
@@ -159,6 +169,8 @@
 		B438C949238B32F200215713 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B438C9702394FB8000215713 /* encontrado.jpg */,
+				B438C96E2394FA3500215713 /* perdido.jpg */,
 				B438C96C238BEB5600215713 /* photo-1543320317-15188058b450.jpeg */,
 				B438C966238BE6B700215713 /* addperrito.png */,
 				B438C962238BE0DC00215713 /* searchperrito.png */,
@@ -276,9 +288,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B438C96F2394FA3500215713 /* perdido.jpg in Resources */,
 				B438C951238BC86F00215713 /* bonesback.jpg in Resources */,
 				B438C926238B31A700215713 /* LaunchScreen.storyboard in Resources */,
 				B438C95F238BDBC900215713 /* labrador.jpeg in Resources */,
+				B438C9712394FB8000215713 /* encontrado.jpg in Resources */,
 				B438C94D238B33A700215713 /* icon.png in Resources */,
 				B438C923238B31A700215713 /* Assets.xcassets in Resources */,
 				B438C963238BE0DD00215713 /* searchperrito.png in Resources */,
@@ -317,6 +331,8 @@
 				B438C955238BD22600215713 /* MainMenuVC.swift in Sources */,
 				B438C91A238B31A600215713 /* AppDelegate.swift in Sources */,
 				B438C91C238B31A600215713 /* SceneDelegate.swift in Sources */,
+				B438C9752395002000215713 /* PerdiVC.swift in Sources */,
+				B438C9732395000F00215713 /* EncontreVC.swift in Sources */,
 				B438C953238BCC6B00215713 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

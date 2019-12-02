@@ -24,7 +24,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zu5-e5-ahY">
                                 <rect key="frame" x="54" y="529" width="307" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aio-dg-gu7">
                                 <rect key="frame" x="54" y="501" width="307" height="27.5"/>
@@ -114,6 +114,10 @@
                             <constraint firstItem="zLo-8i-gMN" firstAttribute="top" secondItem="Lr8-Of-mBX" secondAttribute="bottom" constant="55" id="xiA-q3-iIk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tf1" destination="zLo-8i-gMN" id="eG4-cp-CcW"/>
+                        <outlet property="tf2" destination="zu5-e5-ahY" id="s9F-jC-Hgv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHW-Fg-DQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,12 +151,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7pN-wq-61n">
                                 <rect key="frame" x="66" y="529" width="282" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir contraseña" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gbg-rj-k4S">
                                 <rect key="frame" x="66" y="581" width="282" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="tCr-HM-dlL">
                                 <rect key="frame" x="66" y="125" width="282" height="259"/>
@@ -362,7 +366,7 @@ Caracteristicas: No tiene collar</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOb-1N-3r9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="947.82608695652186" y="1859.5982142857142"/>
+            <point key="canvasLocation" x="1028" y="1860"/>
         </scene>
         <!--Buscar-->
         <scene sceneID="ifL-cg-WeW">
@@ -451,7 +455,7 @@ Características: Tiene un collar gris de piedras</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jae-wf-a9q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795.6521739130437" y="1859.5982142857142"/>
+            <point key="canvasLocation" x="1842" y="1860"/>
         </scene>
         <!--Añadir-->
         <scene sceneID="2st-4k-PlS">
@@ -574,10 +578,10 @@ Características: Tiene un collar gris de piedras</string>
             </objects>
             <point key="canvasLocation" x="3563.7681159420295" y="1184.5982142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--PerdiVC-->
         <scene sceneID="u1N-8Y-Oy7">
             <objects>
-                <viewController id="t9r-sZ-uUj" sceneMemberID="viewController">
+                <viewController id="t9r-sZ-uUj" customClass="PerdiVC" customModule="FirulaisIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cAw-iI-v2D"/>
                         <viewControllerLayoutGuide type="bottom" id="9c6-KL-2WM"/>
@@ -589,19 +593,74 @@ Características: Tiene un collar gris de piedras</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bonesback.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="puJ-RH-w2D">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="847"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0SA-E3-cus">
+                                <rect key="frame" x="26" y="447" width="362" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Raza" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kwx-M0-NJi">
+                                <rect key="frame" x="26" y="388" width="362" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perdido.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="viB-8o-U5R">
+                                <rect key="frame" x="26" y="64" width="362" height="210"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre Firulais" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="boG-mL-h3o">
+                                <rect key="frame" x="26" y="328" width="362" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyp-lR-iZ7">
+                                <rect key="frame" x="179" y="617" width="56" height="30"/>
+                                <state key="normal" title="Publicar"/>
+                                <connections>
+                                    <segue destination="Fml-Cm-lDh" kind="unwind" identifier="returnFromModal" unwindAction="backFromModal:" id="RBG-WL-Hvt"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Visto ultima vez en..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k1b-Du-PIQ">
+                                <rect key="frame" x="26" y="516" width="362" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0SA-E3-cus" firstAttribute="leading" secondItem="UwP-LO-CHx" secondAttribute="leading" constant="26" id="0Cy-px-vag"/>
+                            <constraint firstItem="boG-mL-h3o" firstAttribute="leading" secondItem="UwP-LO-CHx" secondAttribute="leading" constant="26" id="1h3-e0-PtW"/>
+                            <constraint firstAttribute="trailing" secondItem="Yyp-lR-iZ7" secondAttribute="trailing" constant="179" id="5tD-Q3-HlG"/>
+                            <constraint firstItem="9c6-KL-2WM" firstAttribute="top" secondItem="viB-8o-U5R" secondAttribute="bottom" constant="534" id="5wH-sQ-8Mx"/>
+                            <constraint firstItem="k1b-Du-PIQ" firstAttribute="leading" secondItem="UwP-LO-CHx" secondAttribute="leading" constant="26" id="7c8-Nt-YSN"/>
+                            <constraint firstItem="Yyp-lR-iZ7" firstAttribute="leading" secondItem="UwP-LO-CHx" secondAttribute="leading" constant="179" id="AFk-JD-YFV"/>
+                            <constraint firstAttribute="trailing" secondItem="0SA-E3-cus" secondAttribute="trailing" constant="26" id="Qet-Ga-7pF"/>
+                            <constraint firstItem="Yyp-lR-iZ7" firstAttribute="top" secondItem="k1b-Du-PIQ" secondAttribute="bottom" constant="67" id="QgY-JS-WlE"/>
+                            <constraint firstItem="viB-8o-U5R" firstAttribute="leading" secondItem="UwP-LO-CHx" secondAttribute="leading" constant="26" id="Rvq-bR-Wxk"/>
+                            <constraint firstItem="0SA-E3-cus" firstAttribute="top" secondItem="Kwx-M0-NJi" secondAttribute="bottom" constant="25" id="S5h-6n-Hd2"/>
+                            <constraint firstItem="k1b-Du-PIQ" firstAttribute="top" secondItem="0SA-E3-cus" secondAttribute="bottom" constant="35" id="SSg-gz-oE5"/>
+                            <constraint firstItem="k1b-Du-PIQ" firstAttribute="top" secondItem="0SA-E3-cus" secondAttribute="bottom" constant="35" id="Sye-Ny-dD9"/>
                             <constraint firstItem="puJ-RH-w2D" firstAttribute="leading" secondItem="UwP-LO-CHx" secondAttribute="leading" id="UHG-8d-JdQ"/>
+                            <constraint firstItem="Kwx-M0-NJi" firstAttribute="top" secondItem="boG-mL-h3o" secondAttribute="bottom" constant="26" id="W4q-7X-Yhe"/>
+                            <constraint firstAttribute="trailing" secondItem="viB-8o-U5R" secondAttribute="trailing" constant="26" id="WsS-h0-79H"/>
+                            <constraint firstItem="Kwx-M0-NJi" firstAttribute="top" secondItem="boG-mL-h3o" secondAttribute="bottom" constant="26" id="YBY-mG-gc3"/>
                             <constraint firstItem="puJ-RH-w2D" firstAttribute="top" secondItem="cAw-iI-v2D" secondAttribute="bottom" id="bZs-H1-uZX"/>
+                            <constraint firstItem="Kwx-M0-NJi" firstAttribute="leading" secondItem="UwP-LO-CHx" secondAttribute="leading" constant="26" id="c0b-oK-j2M"/>
+                            <constraint firstItem="viB-8o-U5R" firstAttribute="top" secondItem="cAw-iI-v2D" secondAttribute="bottom" constant="64" id="eU5-FN-lb3"/>
+                            <constraint firstAttribute="trailing" secondItem="boG-mL-h3o" secondAttribute="trailing" constant="26" id="fxu-gY-1UE"/>
                             <constraint firstAttribute="bottom" secondItem="puJ-RH-w2D" secondAttribute="bottom" constant="-5" id="jxY-NC-NMR"/>
+                            <constraint firstItem="9c6-KL-2WM" firstAttribute="top" secondItem="Yyp-lR-iZ7" secondAttribute="bottom" constant="161" id="l5s-ol-r6t"/>
+                            <constraint firstAttribute="trailing" secondItem="k1b-Du-PIQ" secondAttribute="trailing" constant="26" id="m3I-EV-wKt"/>
+                            <constraint firstItem="boG-mL-h3o" firstAttribute="top" secondItem="viB-8o-U5R" secondAttribute="bottom" constant="54" id="nbK-hT-Q13"/>
+                            <constraint firstAttribute="trailing" secondItem="Kwx-M0-NJi" secondAttribute="trailing" constant="26" id="p9z-Zz-csb"/>
+                            <constraint firstItem="0SA-E3-cus" firstAttribute="top" secondItem="Kwx-M0-NJi" secondAttribute="bottom" constant="25" id="vwQ-Dg-CQC"/>
                             <constraint firstAttribute="trailing" secondItem="puJ-RH-w2D" secondAttribute="trailing" id="wft-Kr-q6q"/>
+                            <constraint firstItem="Yyp-lR-iZ7" firstAttribute="top" secondItem="k1b-Du-PIQ" secondAttribute="bottom" constant="67" id="yJ0-iE-loE"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGI-Ul-pQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Fml-Cm-lDh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4600" y="1185"/>
+            <point key="canvasLocation" x="4598.5507246376819" y="1184.5982142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sMF-Kh-jXO">
@@ -667,10 +726,10 @@ Características: Tiene un collar gris de piedras</string>
             </objects>
             <point key="canvasLocation" x="3563.7681159420295" y="1859.5982142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--EncontreVC-->
         <scene sceneID="di0-oz-1H5">
             <objects>
-                <viewController id="SXZ-dn-EPm" sceneMemberID="viewController">
+                <viewController id="SXZ-dn-EPm" customClass="EncontreVC" customModule="FirulaisIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jAe-iQ-KH5"/>
                         <viewControllerLayoutGuide type="bottom" id="WXU-up-z4V"/>
@@ -682,17 +741,51 @@ Características: Tiene un collar gris de piedras</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bonesback.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Drp-CF-pZ2">
                                 <rect key="frame" x="0.0" y="-5" width="414" height="847"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre Firulais" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqJ-M6-Fbn">
+                                <rect key="frame" x="26" y="354" width="362" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfK-UC-GLA">
+                                <rect key="frame" x="26" y="421" width="362" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="encontrado.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bLu-NA-Emh">
+                                <rect key="frame" x="46" y="70" width="322" height="210"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxf-kW-Qto">
+                                <rect key="frame" x="179" y="631" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Publicar"/>
+                                <connections>
+                                    <segue destination="QAh-gH-Q4s" kind="unwind" identifier="returnFromModal" unwindAction="backFromModal:" id="4CR-d6-xa8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Encontrado en..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmS-Ni-5zC">
+                                <rect key="frame" x="26" y="488" width="362" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="WXU-up-z4V" firstAttribute="top" secondItem="bLu-NA-Emh" secondAttribute="bottom" constant="528" id="3bb-H1-dbD"/>
                             <constraint firstItem="Drp-CF-pZ2" firstAttribute="top" secondItem="elP-QC-Xb4" secondAttribute="top" constant="-5" id="4j3-VO-ZHj"/>
                             <constraint firstAttribute="bottom" secondItem="Drp-CF-pZ2" secondAttribute="bottom" id="Q5F-DB-66h"/>
+                            <constraint firstItem="bLu-NA-Emh" firstAttribute="top" secondItem="jAe-iQ-KH5" secondAttribute="bottom" constant="70" id="cKJ-dp-uCG"/>
+                            <constraint firstAttribute="trailing" secondItem="bLu-NA-Emh" secondAttribute="trailing" constant="46" id="car-6J-UV9"/>
                             <constraint firstAttribute="trailing" secondItem="Drp-CF-pZ2" secondAttribute="trailing" id="e2u-uh-evl"/>
+                            <constraint firstItem="bLu-NA-Emh" firstAttribute="leading" secondItem="elP-QC-Xb4" secondAttribute="leading" constant="46" id="exQ-FQ-Imk"/>
                             <constraint firstItem="Drp-CF-pZ2" firstAttribute="leading" secondItem="elP-QC-Xb4" secondAttribute="leading" id="mIt-S5-Nzo"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUe-R0-Cko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="QAh-gH-Q4s" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4542" y="1860"/>
         </scene>
@@ -765,6 +858,7 @@ En el Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campu
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Hpb-Iy-VvK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XmY-Ux-yg1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -785,8 +879,10 @@ En el Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campu
         <image name="backlogin.png" width="1500" height="3248"/>
         <image name="bonesback.jpg" width="1080" height="2280"/>
         <image name="dogpets.png" width="21" height="21"/>
+        <image name="encontrado.jpg" width="600" height="386"/>
         <image name="icon.png" width="600" height="600"/>
         <image name="labrador.jpeg" width="1280" height="853"/>
+        <image name="perdido.jpg" width="1080" height="559"/>
         <image name="photo-1543320317-15188058b450.jpeg" width="1000" height="667"/>
         <image name="profile.png" width="28" height="28"/>
         <image name="searchperrito.png" width="28" height="28"/>

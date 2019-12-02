@@ -1,26 +1,21 @@
 //
-//  RegisterVC.swift
+//  PerdiVC.swift
 //  FirulaisIOS
 //
-//  Created by Uriel Pineda on 25/11/19.
+//  Created by Uriel Pineda on 02/12/19.
 //  Copyright © 2019 Uriel Pineda. All rights reserved.
 //
 
 import UIKit
 
-class RegisterVC: UIViewController {
+class PerdiVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func registerSuccesfull(_ sender: Any) {
-        performSegue(withIdentifier: "registerSuccessful", sender: self)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -36,17 +31,8 @@ class RegisterVC: UIViewController {
             self.view.frame.origin.y = 0
         }
     }
-    
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   @IBAction func backFromModal(_ segue: UIStoryboardSegue) {
+       self.tabBarController?.selectedIndex = 1
+   }
 }
